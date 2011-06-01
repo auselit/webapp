@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.metadata.auselit</groupId>
+	<artifactId>danno-auselit-extensions</artifactId>
+	<name>Danno Auselit Extensions</name>
+	<version>0.2-SNAPSHOT</version>
+	<description>Fine Grained Read Support:
+Replacement security policy to restrict the reading of certain annotations.
+
+Replacement RSS View</description>
+	<dependencies>
+		<dependency>
+			<groupId>net.metadata.danno</groupId>
+			<artifactId>danno.test</artifactId>
+			<version>1.5-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.metadata.danno</groupId>
+			<artifactId>danno.servlet</artifactId>
+			<version>1.5-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>1.4.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>0.9</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
