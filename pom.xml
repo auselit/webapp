@@ -7,7 +7,7 @@
   <version>0.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>auselit.danno</name>
+  <name>auselit.webapp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,5 +16,6 @@
 	<modules>
 		<module>auselit.danno.extensions</module>
 		<module>auselit.danno.site</module>
+		<module>../lorestore</module>
 	</modules>
 </project>
