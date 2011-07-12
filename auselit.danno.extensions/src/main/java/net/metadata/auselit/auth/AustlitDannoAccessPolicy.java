@@ -165,7 +165,7 @@ public class AustlitDannoAccessPolicy implements DannoAccessPolicy, DannotateAcc
 		}
 	}
 
-	private boolean isPrivateAnnotation(AnnoteaObject obj) {
+	public boolean isPrivateAnnotation(AnnoteaObject obj) {
 		String prop = obj.getLiteralProperty(privateFieldName);
 
 		if (prop == null) {

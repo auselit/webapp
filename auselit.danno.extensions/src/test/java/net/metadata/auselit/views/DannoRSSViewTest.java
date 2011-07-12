@@ -10,7 +10,7 @@ import au.edu.diasb.annotation.danno.impl.sesame.SesameAnnoteaTypeFactory;
 import au.edu.diasb.annotation.danno.model.RDFContainer;
 import au.edu.diasb.annotation.danno.test.MockHttpServletRequest;
 import au.edu.diasb.annotation.danno.test.MockHttpServletResponse;
-import au.edu.diasb.danno.constants.MimeTypes;
+import au.edu.diasb.danno.constants.DannoMimeTypes;
 
 public class DannoRSSViewTest extends TestCase {
     private SesameAnnoteaTypeFactory tf;
@@ -33,7 +33,7 @@ public class DannoRSSViewTest extends TestCase {
                 new ByteArrayInputStream(ANNOTATION_TEXT.getBytes()));
         DannoResponse mv = new DannoResponse(rdf, false, new Properties());
         MockHttpServletRequest request = new MockHttpServletRequest("GET", "");
-        request.addHeader("accept", MimeTypes.XML_MIMETYPE);
+        request.addHeader("accept", DannoMimeTypes.XML_MIMETYPE);
         MockHttpServletResponse response = new MockHttpServletResponse();
         
         mv.addObject(DannoResponse.RSS_FEED_TITLE_KEY, "feedtitle");

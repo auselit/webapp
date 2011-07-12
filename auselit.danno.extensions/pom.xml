@@ -9,25 +9,29 @@
 Replacement security policy to restrict the reading of certain annotations.
 
 Replacement RSS View</description>
+
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.metadata.danno</groupId>
 			<artifactId>danno.test</artifactId>
-			<version>1.5-SNAPSHOT</version>
+			<version>1.5.1-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.metadata.danno</groupId>
 			<artifactId>danno.servlet</artifactId>
-			<version>1.5-SNAPSHOT</version>
-			<scope>compile</scope>
+			<version>1.5.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.solr</groupId>
 			<artifactId>solr-solrj</artifactId>
-			<version>1.4.1</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>3.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -41,7 +45,7 @@ Replacement RSS View</description>
 			<version>0.9</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
