@@ -146,7 +146,7 @@ public class SolrSecondaryUpdateHandler implements SecondaryUpdateHandler,
 		List<String> deletedIds = new ArrayList<String>();
 		for (String uri : deletedObjectURIs) {
 			// deleted objects are both bodies and annotations, seems to be okay
-			deletedIds.add(uriToId(uri));
+			deletedIds.add(uri);
 		}
 
 		try {
@@ -162,14 +162,8 @@ public class SolrSecondaryUpdateHandler implements SecondaryUpdateHandler,
 			logger.error("Exception updating Solr index", ex);
 		} catch (IOException ex) {
 			logger.error("Exception updating Solr index", ex);
-		} finally {
-			try {
-				server.rollback();
-			} catch (SolrServerException ex) {
-				logger.error("Exception rolling back Solr update", ex);
-			} catch (IOException ex) {
-				logger.error("Exception rolling back Solr update", ex);
-			}
+		} catch (Exception ex) {
+			logger.error("Exception updating Solr index", ex);
 		}
 	}
 
@@ -221,7 +215,7 @@ public class SolrSecondaryUpdateHandler implements SecondaryUpdateHandler,
 			if (ao.getModified() != null)
 				doc.addField("last_modified", ao.getModified().toGregorianCalendar()
 						.getTime());
-			doc.addField("id", uriToId(rdfObjectToUri(ao)));
+			doc.addField("id", rdfObjectToUri(ao));
 
 			Set<String> bodyUris = ao.getBodyUris();
 			for (String bodyUri : bodyUris) {

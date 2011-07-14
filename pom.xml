@@ -13,9 +13,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
-	<modules>
-		<module>auselit.danno.extensions</module>
-		<module>auselit.danno.site</module>
-		<module>../lorestore</module>
-	</modules>
+  <modules>
+    <module>auselit.danno.extensions</module>
+    <module>auselit.danno.site</module>
+    <module>../lorestore</module>
+  </modules>
 </project>
