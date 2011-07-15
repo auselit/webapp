@@ -7,8 +7,15 @@
 	<version>0.2-SNAPSHOT</version>
 	<description>Fine Grained Read Support:
 Replacement security policy to restrict the reading of certain annotations.
+Annotations may be marked as private, and are discoverable/viewable only to the user who created them.
 
-Replacement RSS View</description>
+Replacement RSS View:
+This was to replace the broken RSS display that danno provided, but which has now been fixed.
+Is no longer used.
+
+
+Solr Secondary Update Handler:
+Send annotations to a solr index to provide much faster and more thorough searching than danno. Must be configured using spring with the deployed danno.</description>
 
 
 

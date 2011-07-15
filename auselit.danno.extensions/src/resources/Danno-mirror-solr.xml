@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-lazy-init="true">
+
+	<!--
+		This file configures a secondary update handler to mirror the
+		Danno's RDF objects in the filesystem. 
+        
+        Should be placed into the deployed WEB-INF directory, and loaded
+        by danno by setting danno.mirror=solr in substitutions.properties
+	-->
+
+	<bean id="secondaryUpdateHandler"
+		class="net.metadata.auselit.indexing.SolrSecondaryUpdateHandler" >
+        <property name="props" ref="dannoProps"/>
+        <property name="solrUrl" value="${solr.url}"/>
+        <property name="solrHostname" value="${solr.hostname}"/>
+        <property name="solrPort" value="${solr.port}"/>
+        <property name="solrRealm" value="${solr.realm}"/>
+        <property name="solrUsername" value="${solr.username}"/>
+        <property name="solrPassword" value="${solr.password}"/>
+        <property name="clearIndexOnReset" value="true"/>
+        <property name="dannoAccessPolicy" ref="austlitAccessPolicy" />
+        <property name="dannoControllerConfig" ref="dannoControllerConfig" />
+	</bean>
+
+</beans>
