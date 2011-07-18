@@ -120,6 +120,9 @@ public class AustlitDannoAccessPolicy implements DannoAccessPolicy, DannotateAcc
 
 	public void checkDelete(HttpServletRequest request, AnnoteaObject obj)
 			throws RequestFailureException {
+		if (ac.hasAuthority(null, adminAuthorities)) {
+			return;
+		}
 		ac.checkAuthority(request, writeAuthorities);
 		checkObjectOwner(request, obj);
 	}

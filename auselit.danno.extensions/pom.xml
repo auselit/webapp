@@ -27,13 +27,13 @@ Send annotations to a solr index to provide much faster and more thorough search
 		<dependency>
 			<groupId>net.metadata.danno</groupId>
 			<artifactId>danno.test</artifactId>
-			<version>1.5.1</version>
+			<version>1.5.2-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.metadata.danno</groupId>
 			<artifactId>danno.servlet</artifactId>
-			<version>1.5.1</version>
+			<version>1.5.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.solr</groupId>
