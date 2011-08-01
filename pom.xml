@@ -15,7 +15,7 @@
   
   <modules>
     <module>auselit.danno.extensions</module>
-    <module>auselit.danno.site</module>
+    <module>../auselit.danno.site</module>
     <module>../lorestore</module>
   </modules>
 </project>
