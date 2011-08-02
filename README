@@ -1,0 +1,33 @@
+
+The Aus-e-Lit Web Application was developed at the UQ ITEE eResearch Lab as part of the 
+Aus-e-Lit project.
+
+http://itee.uq.edu.au/~eresearch/projects/aus-e-lit/
+
+The webapp provides services for storing annotations and compound objects, combining 
+several existing web applications (DIAS-B Danno, DIAS-B Emmet and Aus-e-Lit LoreStore) 
+into one war file for easy deployment and management.
+
+Danno provides an Annotea API and manages annotation storage and querying, Emmet manages authentication and authorisation, and LoreStore provides an API for storing ORE compound objects.
+See http://metadata.net/sfprojects/danno.html for more information about Danno and Emmet.
+
+The source code for the webapp is available from https://github.com/auselit/webapp/
+
+Apache Maven is used for dependency management and building the web app. The modules required are
+
+* auselit.danno.site (Maven war overlay with site-specific configuration, see Danno documentation for examples)
+* auselit.danno.extensions (included in webapp on GitHub)
+* lorestore (from GitHub https://github.com/auselit/lorestore/)
+
+We use eclipse to import the modules into a workspace as Maven projects (using eGit and using m2eclipse). 
+The modules should all be located within the same directory (e.g. all within the same eclipse workspace) so that the default paths in the pom file for the webapp project will work.
+
+We build the war file via an eclipse Maven run configuration equivalent to the following command:
+
+mvn clean package
+
+The resulting war file will be auselit.danno.site/target/auselit.war
+
+We also run solr alongside the Aus-e-Lit webapp for full text indexing of annotations.
+
+Please contact us if you would like examples of the the site-specific configuration or solr config.
